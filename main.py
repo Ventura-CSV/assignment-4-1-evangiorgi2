@@ -1,35 +1,29 @@
 def main():
-    result = []
-    #az = "abcdefghijklmnopqrstuvwxyz"
+    result = ''
+ 
     while True:
         start = input('Enter the starting letter: ')
         end = input('Enter the ending letter: ')
         
-        
+        if (ord(start) > ord(end)):
+            print('Input Error.')
+               
         
         for ch in range(ord(start), ord(end)+1):
-           result.append(chr(ch))
-           
-           if (ord(start) > ord(end)):
-               print('Input Error.')
-               break
+           result = result + chr(ch)
            
            
+           
+        
         print(result)
             
             
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
-
-    print(*result)
+    
 
     ########################################
     # Do not delete the return statement
     ########################################
-    return result
+        return result
 
 
 if __name__ == '__main__':
